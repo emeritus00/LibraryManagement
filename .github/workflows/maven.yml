@@ -17,6 +17,7 @@ on:
 permissions:
   contents: read
   security-events: write  # Grants write access for security events, including dependency submissions
+  actions: read           # Allows reading actions and workflows
 
 jobs:
   build:
@@ -38,3 +39,5 @@ jobs:
       # Upload dependency graph to GitHub to improve Dependabot alerts
       - name: Update dependency graph
         uses: advanced-security/maven-dependency-submission-action@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
