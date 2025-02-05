@@ -11,11 +11,11 @@ public class SearchTest {
     @Test
     void testSearchBook() {
         Library library = new Library();
-        Book book = new Book("Effective Java", "Joshua Bloch");
+        Book book = new Book("Computational Java", "Kent Kelly");
         library.addBook(book);
 
-        Optional<Book> foundBook = library.searchBook("Effective Java");
+        Optional<Book> foundBook = library.searchBook("Computational Java");
         assertTrue(foundBook.isPresent());
-        assertEquals("Joshua Bloch", foundBook.get().getAuthor());
+        assertEquals("Kent Kelly", foundBook.get().getAuthor());
     }
 }
