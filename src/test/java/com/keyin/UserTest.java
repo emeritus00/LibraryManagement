@@ -11,7 +11,6 @@ public class UserTest {
         Book book1 = new Book("Book1", "Author1");
         Book book2 = new Book("Book2", "Author2");
         Book book3 = new Book("Book3", "Author3");
-        Book book4 = new Book("Book4", "Author4");
 
         user.borrowBook(book1);
         user.borrowBook(book2);
